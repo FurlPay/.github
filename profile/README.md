@@ -28,6 +28,7 @@
 | [furlpay-cli](https://github.com/FurlPay/furlpay-cli) | `stripe-cli` for stablecoins — webhook forwarding & test events |
 | [furlpay-elements](https://github.com/FurlPay/furlpay-elements) | Embeddable React checkout components |
 | [furlpay-account-kit](https://github.com/FurlPay/furlpay-account-kit) | Safe/ERC-4337 smart accounts, paymaster, time-locked escrow |
+| [furlpay-x402](https://github.com/FurlPay/furlpay-x402) | x402 facilitator + payment middleware — the first Solana-native x402 facilitator |
 | [furlpay-mcp-server](https://github.com/FurlPay/furlpay-mcp-server) | MCP server — drive Furlpay from Claude, Cursor & AI agents |
 | [furlpay-extension](https://github.com/FurlPay/furlpay-extension) | MV3 browser extension (open for security audit) |
 | [furlpay-openapi](https://github.com/FurlPay/furlpay-openapi) | OpenAPI 3.1 spec — generate SDKs in any language |
