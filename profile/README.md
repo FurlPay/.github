@@ -20,23 +20,48 @@
 
 ---
 
+## Start here
+
+**[furlpay-examples](https://github.com/FurlPay/furlpay-examples)** — clone-and-run examples for Next.js, Express, FastAPI, Go, Rust, AI agents (MCP), and selling API access to agents over x402.
+
+## SDKs — one API, four languages
+
+Same client surface and the same webhook signature scheme (`t=<unix>,v1=<hmac-sha256-hex>`, 5-minute replay tolerance) everywhere.
+
+| Language | Install | Repo |
+|---|---|---|
+| Node.js / TypeScript | `npm i @furlpay/furlpay-node` | [furlpay-node](https://github.com/FurlPay/furlpay-node) |
+| Python | `pip install furlpay` *(PyPI release imminent)* | [furlpay-python](https://github.com/FurlPay/furlpay-python) |
+| Go | `go get github.com/furlpay/furlpay-go` | [furlpay-go](https://github.com/FurlPay/furlpay-go) |
+| Rust | `cargo add furlpay` *(crates.io release imminent)* | [furlpay-rust](https://github.com/FurlPay/furlpay-rust) |
+
 ## Build with Furlpay
 
 | Repo | What it is |
 |---|---|
-| [furlpay-node](https://github.com/FurlPay/furlpay-node) | Official Node.js/TypeScript SDK (`@furlpay/furlpay-node`) |
-| [furlpay-cli](https://github.com/FurlPay/furlpay-cli) | `stripe-cli` for stablecoins — webhook forwarding & test events |
-| [furlpay-elements](https://github.com/FurlPay/furlpay-elements) | Embeddable React checkout components |
-| [furlpay-account-kit](https://github.com/FurlPay/furlpay-account-kit) | Safe/ERC-4337 smart accounts, paymaster, time-locked escrow |
+| [furlpay-examples](https://github.com/FurlPay/furlpay-examples) | ⭐ Runnable examples for every stack — the fastest path to a first payment |
+| [furlpay-cli](https://github.com/FurlPay/furlpay-cli) | `stripe-cli` for stablecoins — webhook forwarding & test events (`@furlpay/cli`) |
+| [furlpay-elements](https://github.com/FurlPay/furlpay-elements) | Embeddable React checkout components (`@furlpay/elements`) |
+| [furlpay-account-kit](https://github.com/FurlPay/furlpay-account-kit) | Safe/ERC-4337 smart accounts, paymaster, time-locked escrow (`@furlpay/account-kit`) |
 | [furlpay-x402](https://github.com/FurlPay/furlpay-x402) | x402 facilitator + payment middleware — the first Solana-native x402 facilitator |
-| [furlpay-mcp-server](https://github.com/FurlPay/furlpay-mcp-server) | MCP server — drive Furlpay from Claude, Cursor & AI agents |
+| [furlpay-mcp-server](https://github.com/FurlPay/furlpay-mcp-server) | MCP server — drive Furlpay from Claude, Cursor & AI agents (`@furlpay/mcp-server`) |
 | [furlpay-extension](https://github.com/FurlPay/furlpay-extension) | MV3 browser extension (open for security audit) |
 | [furlpay-openapi](https://github.com/FurlPay/furlpay-openapi) | OpenAPI 3.1 spec — generate SDKs in any language |
 | [furlpay-solana-actions-template](https://github.com/FurlPay/furlpay-solana-actions-template) | Starter: Solana Actions & Blinks checkout links |
 
+## Contribute
+
+We're building payment rails for the agentic internet, and the hard problems are open:
+agent spend mandates, Know-Your-Agent trust signals, idempotency & retry semantics,
+and SDK parity across languages.
+
+- **[Open issues across the org](https://github.com/search?q=org%3AFurlPay+state%3Aopen&type=issues)** — look for `good first issue` and `help wanted`
+- **`agentic-payments` label** — the frontier problems (x402, spend mandates, KYA)
+- **[Contributing guide](https://github.com/FurlPay/.github/blob/main/CONTRIBUTING.md)**
+
 ## Community
 
-- **Questions & integration help** — GitHub Discussions on any repo
+- **Questions & integration help** — GitHub Discussions, enabled on every repo
 - **Security reports** — [hello@furlpay.com](mailto:hello@furlpay.com) (see each repo's SECURITY.md — please don't open public issues)
 - **Show what you built** — Discussions "Show and tell"
 
