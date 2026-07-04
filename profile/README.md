@@ -34,7 +34,7 @@ Same client surface and the same webhook signature scheme (`t=<unix>,v1=<hmac-sh
 | Node.js / TypeScript | `npm i @furlpay/furlpay-node` | [furlpay-node](https://github.com/FurlPay/furlpay-node) |
 | Python | `pip install furlpay` *(PyPI release imminent)* | [furlpay-python](https://github.com/FurlPay/furlpay-python) |
 | Go | `go get github.com/furlpay/furlpay-go` | [furlpay-go](https://github.com/FurlPay/furlpay-go) |
-| Rust | `cargo add furlpay` *(crates.io release imminent)* | [furlpay-rust](https://github.com/FurlPay/furlpay-rust) |
+| Rust | `cargo add furlpay` | [furlpay-rust](https://github.com/FurlPay/furlpay-rust) |
 
 ## Build with Furlpay
 
