@@ -39,18 +39,18 @@
 
 ## Why FurlPay
 
-Incumbents give you a slice. FurlPay is the **whole stack, open source** — the only developer platform that combines stablecoin payments, banking, cards, and investing *and* is built for AI agents to pay natively over x402.
+The **whole stack, open source** — one developer platform that combines stablecoin payments, banking, cards, and investing *and* is built for AI agents to pay natively over x402. The combination below is what makes FurlPay different:
 
-| | **FurlPay** | Stripe / Circle | Coinbase x402 | Skyfire / Payman |
-|---|:--:|:--:|:--:|:--:|
-| Open source (MIT), self-hostable surface | ✅ | — | protocol only | — |
-| Payments + banking + cards + investing in one API | ✅ | payments only | — | — |
-| x402 agent payments | ✅ | MPP (separate) | ✅ | ✅ |
-| Fractional stock/ETF investing built in | ✅ | — | — | — |
-| Agent spend budgets + Know-Your-Agent | ✅ | — | — | ✅ |
-| First-class LangChain / LlamaIndex / MCP tools | ✅ | — | — | LangChain |
+| What you get | |
+|---|:--:|
+| **Open source (MIT)** — inspect & self-host the public surface | ✅ |
+| **Full financial OS** — payments + banking + cards + investing in one API | ✅ |
+| **Agent-native x402** — pay-per-call APIs, agent spend budgets, Know-Your-Agent | ✅ |
+| **Fractional investing built in** — stocks & ETFs via Alpaca | ✅ |
+| **First-class AI tools** — LangChain, LlamaIndex & MCP out of the box | ✅ |
+| **Four SDKs, one surface** — Node · Python · Go · Rust | ✅ |
 
-<sub>Positioning as of 2026 — see [docs](https://furlpay.com/docs) for specifics. FurlPay builds *on* the x402 open standard (Linux Foundation; Google, Visa, Circle, Anthropic, Vercel).</sub>
+<sub>FurlPay builds *on* the x402 open standard (Linux Foundation; Google, Visa, Circle, Anthropic, Vercel). See the [docs](https://furlpay.com/docs).</sub>
 
 ## Quickstart — pick your path
 
@@ -102,15 +102,15 @@ agent = create_tool_calling_agent(llm, tools, prompt)   # your agent can now mov
 
 | Capability | What it does |
 |---|---|
-| 💸 **Payments** | Hosted checkout & payment intents, settled in USDC — instant, no chargebacks |
-| 👛 **Wallets** | MPC / Safe smart accounts, passkeys, multi-chain balances |
-| 🔁 **Transfers & swaps** | Wallet-to-wallet, on-chain, batch; cheapest cross-chain stablecoin routing |
-| 💳 **Cards** | Virtual + physical card issuing, limits, freeze, spend controls |
-| 🏦 **Banking** | Multi-currency accounts — IBAN / ACH / SEPA / SWIFT in and out |
-| 📈 **Investing** | Fractional stocks & ETFs (via Alpaca), portfolios, auto-invest (DCA) |
-| 🤖 **x402 agent rails** | Pay-per-call APIs, agent spend budgets, Know-Your-Agent |
-| 🛡️ **Compliance** | KYC / AML / Travel Rule, jurisdiction & tier engine |
-| 🔔 **Webhooks** | Signed events (`t=<unix>,v1=<hmac-sha256-hex>`, 5-min replay window) |
+| ![Payments](https://img.shields.io/badge/Payments-16A34A?style=flat-square) | Hosted checkout & payment intents, settled in USDC — instant, no chargebacks |
+| ![Wallets](https://img.shields.io/badge/Wallets-7C3AED?style=flat-square) | MPC / Safe smart accounts, passkeys, multi-chain balances |
+| ![Transfers &amp; Swaps](https://img.shields.io/badge/Transfers%20%26%20Swaps-0EA5E9?style=flat-square) | Wallet-to-wallet, on-chain, batch; cheapest cross-chain stablecoin routing |
+| ![Cards](https://img.shields.io/badge/Cards-F59E0B?style=flat-square) | Virtual + physical card issuing, limits, freeze, spend controls |
+| ![Banking](https://img.shields.io/badge/Banking-2563EB?style=flat-square) | Multi-currency accounts — IBAN / ACH / SEPA / SWIFT in and out |
+| ![Investing](https://img.shields.io/badge/Investing-059669?style=flat-square) | Fractional stocks & ETFs (via Alpaca), portfolios, auto-invest (DCA) |
+| ![x402 Agent Rails](https://img.shields.io/badge/x402%20Agent%20Rails-6F4FF2?style=flat-square) | Pay-per-call APIs, agent spend budgets, Know-Your-Agent |
+| ![Compliance](https://img.shields.io/badge/Compliance-DC2626?style=flat-square) | KYC / AML / Travel Rule, jurisdiction & tier engine |
+| ![Webhooks](https://img.shields.io/badge/Webhooks-111111?style=flat-square) | Signed events (`t=<unix>,v1=<hmac-sha256-hex>`, 5-min replay window) |
 
 ## Architecture
 
