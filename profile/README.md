@@ -2,9 +2,11 @@
 
 ![Furlpay — The On-Chain Financial Operating System](https://raw.githubusercontent.com/FurlPay/.github/main/profile/banner.png)
 
-**Stablecoin payments · global banking · virtual cards · fractional investing — with a developer ecosystem to build on all of it.**
+# The open-source financial OS for the agentic internet
 
-[Website](https://furlpay.com) · [Docs](https://furlpay.com/docs) · [API Spec](https://github.com/FurlPay/furlpay-openapi) · [hello@furlpay.com](mailto:hello@furlpay.com)
+**Stablecoin payments · global banking · virtual cards · fractional investing — plus [x402](https://furlpay.com/docs/x402) rails so AI agents can pay for what they use. One API, four SDKs, MIT-licensed.**
+
+[**Get API keys →**](https://furlpay.com/signup) · [Docs](https://furlpay.com/docs) · [Pricing](https://furlpay.com/pricing) · [Book a demo](https://furlpay.com/talk-to-us) · [API Spec](https://github.com/FurlPay/furlpay-openapi)
 
 **Stack**
 
@@ -35,13 +37,103 @@
 
 ---
 
-## Start here
+## Why FurlPay
 
-**[furlpay-examples](https://github.com/FurlPay/furlpay-examples)** — clone-and-run examples for Next.js, Express, FastAPI, Go, Rust, AI agents (MCP), and selling API access to agents over x402.
+Incumbents give you a slice. FurlPay is the **whole stack, open source** — the only developer platform that combines stablecoin payments, banking, cards, and investing *and* is built for AI agents to pay natively over x402.
+
+| | **FurlPay** | Stripe / Circle | Coinbase x402 | Skyfire / Payman |
+|---|:--:|:--:|:--:|:--:|
+| Open source (MIT), self-hostable surface | ✅ | — | protocol only | — |
+| Payments + banking + cards + investing in one API | ✅ | payments only | — | — |
+| x402 agent payments | ✅ | MPP (separate) | ✅ | ✅ |
+| Fractional stock/ETF investing built in | ✅ | — | — | — |
+| Agent spend budgets + Know-Your-Agent | ✅ | — | — | ✅ |
+| First-class LangChain / LlamaIndex / MCP tools | ✅ | — | — | LangChain |
+
+<sub>Positioning as of 2026 — see [docs](https://furlpay.com/docs) for specifics. FurlPay builds *on* the x402 open standard (Linux Foundation; Google, Visa, Circle, Anthropic, Vercel).</sub>
+
+## Quickstart — pick your path
+
+**Accept stablecoins & use the full API** — `npm i @furlpay/furlpay-node`
+
+```ts
+import { Furlpay } from "@furlpay/furlpay-node";
+const furlpay = new Furlpay({ apiKey: process.env.FURLPAY_API_KEY! });
+
+const wallet = await furlpay.wallets.retrieve();                 // MPC smart-account balances
+const order  = await furlpay.investing.createOrder({             // fractional stock, funded in USDC
+  symbol: "AAPL", side: "buy", notional: 100,
+});
+```
+
+**Sell an API to AI agents over x402** — `npm i @furlpay/x402`
+
+```ts
+import { withX402 } from "@furlpay/x402";
+
+// Unpaid requests get HTTP 402; paid ones run the handler. No API keys, no accounts.
+export const GET = withX402(
+  async () => Response.json({ data: "premium market signal" }),
+  { payTo: "0xYourAddress", network: "base", amount: "10000", description: "Premium data" }
+);
+```
+
+**Give your AI agent a wallet** — `pip install furlpay-langchain` (or `furlpay-llamaindex`)
+
+```python
+from furlpay_langchain import get_furlpay_tools
+
+tools = get_furlpay_tools()   # 12 tools: pay, invest, transfer, swap, and pay-per-call over x402
+agent = create_tool_calling_agent(llm, tools, prompt)   # your agent can now move money — within a budget
+```
+
+**Drive FurlPay from Claude / Cursor** — add the MCP server to your client config:
+
+```json
+{ "mcpServers": { "furlpay": {
+  "command": "npx", "args": ["-y", "@furlpay/mcp-server"],
+  "env": { "FURLPAY_API_KEY": "fp_live_sk_..." }
+} } }
+```
+
+> New here? **[furlpay-examples](https://github.com/FurlPay/furlpay-examples)** is clone-and-run for Next.js, Express, FastAPI, Go, Rust, MCP & x402 — the fastest path to a first payment.
+
+## What you can build
+
+| Capability | What it does |
+|---|---|
+| 💸 **Payments** | Hosted checkout & payment intents, settled in USDC — instant, no chargebacks |
+| 👛 **Wallets** | MPC / Safe smart accounts, passkeys, multi-chain balances |
+| 🔁 **Transfers & swaps** | Wallet-to-wallet, on-chain, batch; cheapest cross-chain stablecoin routing |
+| 💳 **Cards** | Virtual + physical card issuing, limits, freeze, spend controls |
+| 🏦 **Banking** | Multi-currency accounts — IBAN / ACH / SEPA / SWIFT in and out |
+| 📈 **Investing** | Fractional stocks & ETFs (via Alpaca), portfolios, auto-invest (DCA) |
+| 🤖 **x402 agent rails** | Pay-per-call APIs, agent spend budgets, Know-Your-Agent |
+| 🛡️ **Compliance** | KYC / AML / Travel Rule, jurisdiction & tier engine |
+| 🔔 **Webhooks** | Signed events (`t=<unix>,v1=<hmac-sha256-hex>`, 5-min replay window) |
+
+## Architecture
+
+```mermaid
+flowchart LR
+  A["Your app · AI agent"] -->|"REST · SDKs · MCP · x402"| B(("FurlPay API"))
+  B --> C["Payments & Checkout"]
+  B --> D["Wallets · MPC custody"]
+  B --> E["Cards"]
+  B --> F["Banking"]
+  B --> G["Investing · Alpaca"]
+  B --> H["x402 facilitator"]
+  C --> I[("Solana · Base · USDC · banks")]
+  D --> I
+  E --> I
+  F --> I
+  G --> I
+  H --> I
+```
 
 ## SDKs — one API, four languages
 
-Same client surface and the same webhook signature scheme (`t=<unix>,v1=<hmac-sha256-hex>`, 5-minute replay tolerance) everywhere.
+Same client surface and the same webhook signature scheme everywhere.
 
 | Language | Install | Repo |
 |---|---|---|
@@ -82,6 +174,15 @@ Give an AI agent a wallet: check balances, create checkouts, move stablecoins, i
 | [furlpay-market-data](https://github.com/FurlPay/furlpay-market-data) | Real-time stock/ETF quotes & bars — Alpha Vantage + Nasdaq aggregator with demo fallback (`npm i @furlpay/market-data`) |
 | [furlpay-auto-invest](https://github.com/FurlPay/furlpay-auto-invest) | Automated dollar-cost averaging — schedule recurring USDC-funded buys (`npm i @furlpay/auto-invest`) |
 
+## Security & trust
+
+Payments infrastructure is only as good as its security posture.
+
+- **Published, provenance-tracked packages** across npm, PyPI & crates.io — no unsigned releases.
+- **[x402-guard](https://github.com/FurlPay/x402-guard)** implements defenses for every known x402 facilitator flaw (request-binding, nonce linearization, allowance reserve-commit, settlement capacity limits, adaptive pricing) — the hardening layer facilitators skip.
+- **Private core** — custody engines, fraud models, and HSM signing policies stay in a private monorepo; public packages are the supported, auditable surface.
+- **Responsible disclosure** — [hello@furlpay.com](mailto:hello@furlpay.com); see each repo's `SECURITY.md`. Please don't open public issues for vulnerabilities.
+
 ## Contribute
 
 We're building payment rails for the agentic internet, and the hard problems are open:
@@ -95,11 +196,17 @@ and SDK parity across languages.
 ## Community
 
 - **Questions & integration help** — GitHub Discussions, enabled on every repo
-- **Security reports** — [hello@furlpay.com](mailto:hello@furlpay.com) (see each repo's SECURITY.md — please don't open public issues)
+- **Security reports** — [hello@furlpay.com](mailto:hello@furlpay.com) (see each repo's SECURITY.md)
 - **Show what you built** — Discussions "Show and tell"
 
-## What stays private
+---
 
-Core custody engines, fraud models, HSM signing policies, and the production
-application are developed in a private monorepo. The packages here are mirrored
-from it and are the supported public surface.
+<div align="center">
+
+### Ready to move money — for humans and agents?
+
+[**Get API keys →**](https://furlpay.com/signup) · [Read the docs](https://furlpay.com/docs) · [Book a demo](https://furlpay.com/talk-to-us)
+
+<sub>Open source (MIT). Core custody, fraud models & HSM signing stay private; public packages are the supported surface.</sub>
+
+</div>
