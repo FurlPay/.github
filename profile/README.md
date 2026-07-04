@@ -41,14 +41,12 @@
 
 The **whole stack, open source** — one developer platform that combines stablecoin payments, banking, cards, and investing *and* is built for AI agents to pay natively over x402. The combination below is what makes FurlPay different:
 
-| What you get | |
-|---|:--:|
-| **Open source (MIT)** — inspect & self-host the public surface | ✅ |
-| **Full financial OS** — payments + banking + cards + investing in one API | ✅ |
-| **Agent-native x402** — pay-per-call APIs, agent spend budgets, Know-Your-Agent | ✅ |
-| **Fractional investing built in** — stocks & ETFs via Alpaca | ✅ |
-| **First-class AI tools** — LangChain, LlamaIndex & MCP out of the box | ✅ |
-| **Four SDKs, one surface** — Node · Python · Go · Rust | ✅ |
+- **Open source (MIT)** — inspect & self-host the public surface
+- **Full financial OS** — payments + banking + cards + investing in one API
+- **Agent-native x402** — pay-per-call APIs, agent spend budgets, Know-Your-Agent
+- **Fractional investing built in** — stocks & ETFs via Alpaca
+- **First-class AI tools** — LangChain, LlamaIndex & MCP out of the box
+- **Four SDKs, one surface** — Node · Python · Go · Rust
 
 <sub>FurlPay builds *on* the x402 open standard (Linux Foundation; Google, Visa, Circle, Anthropic, Vercel). See the [docs](https://furlpay.com/docs).</sub>
 
