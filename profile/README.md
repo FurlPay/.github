@@ -164,6 +164,7 @@ Give an AI agent a wallet: check balances, create checkouts, move stablecoins, i
 | [furlpay-langchain](https://github.com/FurlPay/furlpay-langchain) | Furlpay tools for **LangChain** — 12 agent tools incl. autonomous x402 payments (`pip install furlpay-langchain`) |
 | [furlpay-llamaindex](https://github.com/FurlPay/furlpay-llamaindex) | Furlpay tool spec for **LlamaIndex** — same agent toolset (`pip install furlpay-llamaindex`) |
 | [furlpay-openbb-plugin](https://github.com/FurlPay/furlpay-openbb-plugin) | The **execution layer** for OpenBB Workspace — trade, DCA & settle in stablecoins |
+| [furlpay-travel-mcp](https://github.com/FurlPay/furlpay-travel-mcp) | **FurlPay Travels** — compose Travala travel search + FurlPay pay (x402/USDC on Base or MCC-locked Visa VCN); earns the 10% cbBTC rebate (`@furlpay/travel-mcp`) |
 
 ## Data & investing
 
