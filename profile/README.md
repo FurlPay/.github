@@ -4,7 +4,7 @@
 
 # The open-source financial OS for the agentic internet
 
-**Stablecoin payments · global banking · virtual cards · fractional investing — plus [x402](https://furlpay.com/docs/x402) rails so AI agents can pay for what they use. One API, four SDKs, MIT-licensed.**
+**Stablecoin payments · global banking · virtual cards · fractional investing — plus [x402](https://furlpay.com/docs/payments/agentic-x402) rails so AI agents can pay for what they use. One API, four SDKs, MIT-licensed.**
 
 [**Get API keys →**](https://furlpay.com/signup) · [Docs](https://furlpay.com/docs) · [Pricing](https://furlpay.com/pricing) · [Book a demo](https://furlpay.com/talk-to-us) · [API Spec](https://github.com/FurlPay/furlpay-openapi)
 
