@@ -6,15 +6,29 @@
 
 [Website](https://furlpay.com) · [Docs](https://furlpay.com/docs) · [API Spec](https://github.com/FurlPay/furlpay-openapi) · [hello@furlpay.com](mailto:hello@furlpay.com)
 
+**Stack**
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff)
 ![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff)
 ![React](https://img.shields.io/badge/React-087EA4?logo=react&logoColor=fff)
-![Solana](https://img.shields.io/badge/Solana-9945FF?logo=solana&logoColor=fff)
-![Rust](https://img.shields.io/badge/Rust-000?logo=rust&logoColor=fff)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
+![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=fff)
+![Rust](https://img.shields.io/badge/Rust-000?logo=rust&logoColor=fff)
+![Solana](https://img.shields.io/badge/Solana-9945FF?logo=solana&logoColor=fff)
+![USDC](https://img.shields.io/badge/USDC-2775CA?logo=circle&logoColor=fff)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)
 ![OpenAPI](https://img.shields.io/badge/OpenAPI%203.1-6BA539?logo=openapiinitiative&logoColor=fff)
-![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-111)
+![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-111?logo=anthropic&logoColor=fff)
+![x402](https://img.shields.io/badge/x402-agentic%20payments-6F4FF2)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?logo=langchain&logoColor=fff)
+![LlamaIndex](https://img.shields.io/badge/🦙%20LlamaIndex-5A3E8E)
+
+**Live on registries**
+
+![npm](https://img.shields.io/npm/v/@furlpay/furlpay-node?logo=npm&logoColor=fff&label=npm&color=CB3837)
+![PyPI](https://img.shields.io/pypi/v/furlpay?logo=pypi&logoColor=fff&label=PyPI&color=3775A9)
+![crates.io](https://img.shields.io/crates/v/furlpay?logo=rust&logoColor=fff&label=crates.io&color=E43717)
 ![MIT](https://img.shields.io/badge/License-MIT-00E599)
 
 </div>
