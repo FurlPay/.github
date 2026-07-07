@@ -9,6 +9,7 @@
 [**Get API keys →**](https://furlpay.com/signup) · [Docs](https://furlpay.com/docs) · [Pricing](https://furlpay.com/pricing) · [Book a demo](https://furlpay.com/talk-to-us) · [API Spec](https://github.com/FurlPay/furlpay-openapi)
 
 [![YouTube](https://img.shields.io/badge/YouTube-@furlpay-FF0000?logo=youtube&logoColor=fff)](https://www.youtube.com/@furlpay)
+[![Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?logo=discord&logoColor=fff)](https://discord.gg/eqsYHHvcv)
 
 **Stack**
 
@@ -198,6 +199,7 @@ and SDK parity across languages.
 
 - **Questions & integration help** — GitHub Discussions, enabled on every repo
 - **Watch demos & tutorials** — [YouTube @furlpay](https://www.youtube.com/@furlpay)
+- **Join the conversation** — [Discord](https://discord.gg/eqsYHHvcv)
 - **Security reports** — [hello@furlpay.com](mailto:hello@furlpay.com) (see each repo's SECURITY.md)
 - **Show what you built** — Discussions "Show and tell"
 
